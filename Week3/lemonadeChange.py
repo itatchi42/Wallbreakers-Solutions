@@ -1,26 +1,25 @@
-#Took 1 hr of debugging...
+# Took 10 minutes (compared to 1 hr when I first did this problem 2 mo. ago...NICE!)
+
 class Solution:
     def lemonadeChange(self, bills: List[int]) -> bool:
-        fives = 0
-        tens = 0
-        twenties = 0
-        for curr in bills:
-            if curr == 5:
+        # Runtime: O(n)
+        
+        fives, tens = 0, 0
+        
+        for bill in bills:
+            if bill == 5:
                 fives += 1
-            if curr == 10:
-                if fives < 1:
+            if bill == 10:
+                tens += 1
+                if not fives: # If I've got no $5
                     return False
                 fives -= 1
-                tens += 1                
-            if curr == 20:
-                if fives < 1:
-                    return False
-                elif fives > 0 and tens > 0:
+            if bill == 20:
+                if tens and fives: # If I've got at LEAST 1x$10  and 1x$5
+                    tens -=1
                     fives -= 1
-                    tens -= 1
-                elif fives >= 3 and tens <= 0: #if tens <= 0
+                elif not tens and fives >= 3: # If I've got at LEAST 3x$5
                     fives -= 3
-                else: 
-                    return False
-        return True
-                
+                else: return False
+        return True # Default
+            
