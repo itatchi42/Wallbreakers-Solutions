@@ -1,33 +1,32 @@
 class Solution:
     def findContentChildren(self, g: List[int], s: List[int]) -> int:
-        #check if both lists empty
+        # Base case
         if not g or not s:
             return 0
-       
+        
+        # More efficient way (sort first, THEN search in linear time)
+        # Runtime: O(logn)
         g.sort()
-        s.sort() #to make sure I'm getting correct NEXT greatest num
+        s.sort()
         
-        count = 0
-        indx = -1
-        #default -1 if didn't find cookie >= curr child's greed factor
-        for factor in g:
-            indx = next((x[0] for x in enumerate(s) if x[1] >= factor), -1) #Do I have cookie >= greed?
-            if indx >= 0: 
-                s.pop(indx) #Cannot reassign cookies
-                count += 1
-        return count 
-
- 
-#         g.sort()
-#         s.sort()
+        greed, size, numHappy = 0, 0, 0
+        while greed < len(g) and size < len(s):
+            if s[size] >= g[greed]:
+                numHappy += 1
+                greed += 1 # Next kid
+            size += 1 # Next cookie
+        return numHappy
         
-#         i, j, count = 0, 0, 0
-#         while j < len(g) and i < len(s):
-#             print(i)
-#             print(j)
-#             if s[i] >= g[j]: #I have cookie >= greed?
-#                 print('yup')
-#                 count += 1
-#                 j += 1 #next greed
-#             i += 1 #next cookie
-#         return count
+        # Naive way: O(n^2) where I iterate over s for each ele in g
+        # Runtime: O(n^2)
+        # numCookies, numHappy = len(s), 0
+        # for greed in g:
+        #     for size in s:
+        #         if size >= greed:
+        #             numHappy = min(numCookies, numHappy + 1)
+        #             break # See if I can make next child happy
+        # return numHappy
+        
+        
+                    
+        
