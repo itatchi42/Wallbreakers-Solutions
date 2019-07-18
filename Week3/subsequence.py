@@ -1,12 +1,28 @@
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-    #Refined solution (O(n^2)):
-        for x in range(0, len(s)):
-            if t.find(s[x]) != -1:
-                t = t[t.index(s[x]) + 1 : ]
-            else:
+        # My soln (O(n))
+        if not s and not t: return True
+        if not t: return False
+        if not s: return True
+        
+        countS, countT = Counter(s), Counter(t) # This line is bottleneck
+        i, j = 0, 0
+        while i < len(s) and j < len(t):
+            if not countT[s[i]]: # O(1)
                 return False
+            if s[i] == t[j]: 
+                i += 1 # Next letter in 's'
+            j += 1 # Next letter in 't'
+        if i < len(s): return False
         return True
+        
+#     # Slower solution (O(n^2)):
+#         for x in range(0, len(s)):
+#             if t.find(s[x]) != -1:
+#                 t = t[t.index(s[x]) + 1 : ]
+#             else:
+#                 return False
+#         return True
                 
         
         
