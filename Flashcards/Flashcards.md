@@ -3,6 +3,7 @@
 ## Contents
 
 - [Lists](#Lists)
+- [Sorting](Sorting) 
 
 
 
@@ -30,4 +31,24 @@ bisect.bisect(a, 2) # returns 2
 ```
 
 ##  
+
+## Sorting
+
+### Quick Sort
+
+Randomly pick a pivot. Use two pointers and continue swapping them until everything to the left of pivot is < pivot value and everything to right is >= pivot value. 
+
+Recursivey halve the array and repeat quick sort on each half.
+
+Complexity: **O(nlogn)**
+
+#### Implementation
+
+```python
+# TODO: Implement quick sort here
+```
+
+
+
+
 
