@@ -34,6 +34,20 @@ bisect.bisect(a, 2) # returns 2
 
 ## Sorting
 
+### Merge Sort
+
+Split array into pairs of two elements and do atomic swaps. Then merge pairs together and sort the merged array. 
+
+Complexity: **O(nlogn)**
+
+#### Implementation
+
+```python
+# TODO: Implement merge sort here
+```
+
+
+
 ### Quick Sort
 
 Randomly pick a pivot. Use two pointers and continue swapping them until everything to the left of pivot is < pivot value and everything to right is >= pivot value. 
