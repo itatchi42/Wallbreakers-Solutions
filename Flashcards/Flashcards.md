@@ -2,14 +2,16 @@
 
 ## Contents
 
-- [Lists](#Lists)
-- [Sorting](Sorting) 
+- [Data Structures](#Data Structures)
+- [Sorting](#Sorting) 
 
 
 
-## Lists
+## Data Structures
 
-### Sort w/ Lambda
+### Lists:
+
+#### Sort w/ Lambda
 
 ```python
 lst = [('candy','30','100'), ('apple','10','200'), ('baby','20','300')]
@@ -17,7 +19,7 @@ lst.sort(key=lambda x : x[1])
 print(lst)
 ```
 
-### Binary Search
+#### Binary Search
 
 Bisect is Python's build-in binary search algorithm that returns insertion point to maintain sorted order of list. It assumes the list is **sorted**.
 
@@ -30,7 +32,21 @@ bisect.bisect_right(a, 2) # returns 2
 bisect.bisect(a, 2) # returns 2
 ```
 
-##  
+
+
+### Heaps:
+
+**O(1)** lookup find-max for max heaps, **O(logn)** deletion of max, and **O(logn)** node insertion. 
+
+
+
+### Binary Search Trees:
+
+**O(logn)** insertion, deletion, lookups, find-min, find-max, when tree is height-balanced.
+
+*Height Balanced* means the height difference b/t the left and right subtrees is <= 1. Ex:![img](https://media.geeksforgeeks.org/wp-content/uploads/tree.jpg)
+
+
 
 ## Sorting
 
