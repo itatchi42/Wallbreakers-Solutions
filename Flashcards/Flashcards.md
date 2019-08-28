@@ -66,16 +66,42 @@ Complexity: **O(nlogn)**
 
 ### Quick Sort
 
-Randomly pick a pivot. Use two pointers and continue swapping them until everything to the left of pivot is < pivot value and everything to right is >= pivot value. 
+Set a pointer to the last ele of the array and call it `pivot`. Set another pointer to the beginning of the array and call it `i`. Continue swapping them until everything to the left of pivot is < pivot value and everything to right is >= pivot value. 
 
 Recursivey halve the array and repeat quick sort on each half.
+
+Ex:
+
+Here, 2 is the pivot. Since 8 > 2, we shift the pivot left and perform the swap.
+
+![image-20190828123926125](/Users/Jon/Library/Application Support/typora-user-images/image-20190828123926125.png)
+
+Below, 2 is still the pivot. Since 10 > 2, we shift the pivot left and perform the swap again. The resultant array looks like `[0, 3, 1, 7, 2, 10, 8 ]`.
+
+![image-20190828124149531](/Users/Jon/Library/Application Support/typora-user-images/image-20190828124149531.png)
 
 Complexity: **O(nlogn)**
 
 #### Implementation
 
 ```python
-# TODO: Implement quick sort here
+# Tested. Works.
+class soln:
+	def quicksort(self, array, start, end):
+		if end - start < 1: return
+		i, pivot = start, end
+		while i < pivot:
+			if array[i] > array[pivot]:
+				temp = array[i]
+				array[i] = array[pivot - 1] # Swap values
+				array[pivot - 1] = array[pivot] # Shift values
+				array[pivot] = temp
+				pivot -= 1 # Change pivot ptr
+			else: i+= 1
+
+		self.quicksort(array, start, pivot-1) # LHS
+		self.quicksort(array, pivot + 1, end ) # RHS, Don't include pivot b/c pivot is in right place
+		return array
 ```
 
 
