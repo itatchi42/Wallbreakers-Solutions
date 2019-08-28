@@ -76,7 +76,7 @@ Here, 2 is the pivot. Since 8 > 2, we shift the pivot left and perform the swap.
 
 ![quicksort1](https://github.com/itatchi42/Wallbreakers-Solutions/blob/master/Flashcards/images/quicksort1.png)
 
-Below, 2 is still the pivot. Since 10 > 2, we shift the pivot left and perform the swap again. The resultant array looks like `[0, 3, 1, 7, 2, 10, 8 ]`.
+Below, 2 is still the pivot. Since 10 > 2, we shift the pivot left and perform the swap again. After this step, the resultant array will look like `[0, 3, 1, 7, 2, 10, 8 ]`.
 
 ![quicksort2](https://github.com/itatchi42/Wallbreakers-Solutions/blob/master/Flashcards/images/quicksort1.png)
 
