@@ -74,11 +74,11 @@ Ex:
 
 Here, 2 is the pivot. Since 8 > 2, we shift the pivot left and perform the swap.
 
-![image-20190828123926125](/Users/Jon/Library/Application Support/typora-user-images/image-20190828123926125.png)
+![quicksort1](/images/quicksort1.png)
 
 Below, 2 is still the pivot. Since 10 > 2, we shift the pivot left and perform the swap again. The resultant array looks like `[0, 3, 1, 7, 2, 10, 8 ]`.
 
-![image-20190828124149531](/Users/Jon/Library/Application Support/typora-user-images/image-20190828124149531.png)
+![quicksort2](/images/quicksort2.png)
 
 Complexity: **O(nlogn)**
 
