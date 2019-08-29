@@ -19,8 +19,8 @@ Jonathan's Wallbreaker solutions repo. Jonathan is part of the first cohort of t
 | Problem | Difficulty |Concept | Total Deep-focus Time (min) | Times Visited | Understood | Implemented Correctly|
 |---------|------------|---------|-----------------------|---------------|------------|------------|
 |    56    |   Medium | Sorting    |   30          |        1       | Yes | Yes
-|72         |   Hard |DP + Recursion |  120        |     2       | Yes | Not yet|
-|213    | Medium |DP + Greedy     | 40 (bad)      | 1           | Not yet| Not yet|
+|72         |   Hard |DP + Recursion |  120 (slow)       |     2       | Yes | Not yet|
+|213    | Medium |DP + Greedy     | 40 (slow)      | 1           | Not yet| Not yet|
 
 
 ### References:
