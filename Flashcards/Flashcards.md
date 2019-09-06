@@ -142,21 +142,21 @@ Complexity: **O(nlogn)**
 ```python
 # Tested. Works.
 class soln:
-	def quicksort(self, array, start, end):
-		if end - start < 1: return
-		i, pivot = start, end
-		while i < pivot:
-			if array[i] > array[pivot]:
-				temp = array[i]
-				array[i] = array[pivot - 1] # Swap values
-				array[pivot - 1] = array[pivot] # Shift values
-				array[pivot] = temp
-				pivot -= 1 # Change pivot ptr
-			else: i+= 1
+    def quicksort(self, array, start, end):
+        if end - start < 1: return
+	i, pivot = start, end
+	while i < pivot:
+	    if array[i] > array[pivot]:
+	    temp = array[i]
+    	    array[i] = array[pivot - 1] # Swap values
+ 	    array[pivot - 1] = array[pivot] # Shift values
+	    array[pivot] = temp
+	    pivot -= 1 # Change pivot ptr
+	    else: i+= 1
 
-		self.quicksort(array, start, pivot-1) # LHS
-		self.quicksort(array, pivot + 1, end ) # RHS, Don't include pivot b/c pivot is in right place
-		return array
+	self.quicksort(array, start, pivot-1) # LHS
+	self.quicksort(array, pivot + 1, end ) # RHS, Don't include pivot b/c pivot is in right place
+	return array
 ```
 
 

@@ -16,11 +16,11 @@ Jonathan's Wallbreaker solutions repo. Jonathan is part of the first cohort of t
 
 ## Progress tracking:
 
-| Problem | Concept | Total Deep-focus Time | Times Visited | Understood
-|---------|---------|-----------------------|---------------|------------|
-|    56    |     Sorting    |   30          |        1       | Yes
-|72         |   DP + Recursion |  30        |     1       | Not yet |
-|213    | DP + Greedy     | 40 (bad)      | 1           | Not yet|
+| Problem | Difficulty |Concept | Total Deep-focus Time (min) | Times Visited | Understood | Implemented Correctly|
+|---------|------------|---------|-----------------------|---------------|------------|------------|
+|    56    |   Medium | Sorting    |   30          |        1       | Yes | Yes
+|72         |   Hard |DP + Recursion |  120 (slow)       |     2       | Yes | Not yet|
+|213    | Medium |DP + Greedy     | 40 (slow)      | 1           | Not yet| Not yet|
 
 
 ### References:
