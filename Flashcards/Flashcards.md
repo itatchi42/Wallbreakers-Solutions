@@ -9,6 +9,20 @@
 
 ## Data Structures
 
+### 2D Arrays:
+
+You can implement a 2D array very easily w/ a dict, for example:
+
+```python
+arr2D = dict()
+arr2D[0, 0] = 5
+arr2D[0, 1] = 5
+```
+
+
+
+
+
 ### Lists:
 
 #### Sort w/ Lambda
@@ -21,7 +35,9 @@ print(lst)
 
 #### Binary Search
 
-Bisect is Python's build-in binary search algorithm that returns insertion point to maintain sorted order of list. It assumes the list is **sorted**.
+Bisect is Python's build-in binary search algorithm that returns insertion point to maintain sorted order of list. It assumes the list is **sorted**. 
+
+It's recommended to search using `bisect` rather than `find` or `index` in a sorted list.
 
 ``` python
 import bisect
@@ -34,9 +50,13 @@ bisect.bisect(a, 2) # returns 2
 
 
 
+
+
 ### Heaps:
 
 **O(1)** lookup find-max for max heaps, **O(logn)** deletion of max, and **O(logn)** node insertion. 
+
+
 
 
 
@@ -45,6 +65,41 @@ bisect.bisect(a, 2) # returns 2
 **O(logn)** insertion, deletion, lookups, find-min, find-max, when tree is height-balanced.
 
 *Height Balanced* means the height difference b/t the left and right subtrees is <= 1. Ex:![img](https://media.geeksforgeeks.org/wp-content/uploads/tree.jpg)
+
+
+
+
+
+### Union Finds:
+
+Structure that merges clusters of nodes together. Merges smaller cluster into larger cluster. 
+
+When path compression is implemented, the complexity of the 'find' operation is **O(n)** and the complexity of the 'union' operation is also **O(n)**. 
+
+#### Implementation
+
+```python
+class UnionFind:
+  def __init__(self, x):
+    self.children = [0 for num in range(x)]
+    self.parent = list(range(x)) # Each node points to themself as parent
+  def find(self, node):
+    if self.parent[node] == node: # If pt to yourself (i.e., root)
+      return node
+    root = self.find(self.parent[node]) # Recurse up through parents 'till root
+    self.parent[node] = root # Path compression
+    return self.parent[node]
+  def union(self, node1, node2):
+    root1, root2 = self.find(node1), self.find(node2)
+    if self.children[root1] > self.children[root2]: # merge group2 -> group1
+      self.parent[root2] = root1
+      self.children[root1] += self.children[root2]
+    if self.children[root2] >= self.children[root1]: # merge group1 -> group2
+      self.parent[root1] = root2
+      self.children[root2] += self.children[root1] 
+```
+
+
 
 
 
