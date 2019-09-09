@@ -2,8 +2,24 @@
 
 ## Contents
 
+- [Primitive Types](#Primative Types)
 - [Data Structures](#Data Structures)
 - [Sorting](#Sorting) 
+
+
+
+## Primitive Types
+
+### Strings:
+
+#### ASCII Characters
+
+```python
+val = ord('a') # val = 97
+letter = chr(val) # letter = 'a'
+```
+
+
 
 
 
@@ -26,6 +42,8 @@ arr2D[0, 1] = 5
 ### Lists:
 
 #### Sort w/ Lambda
+
+Allows you to specify the key that you wish to sort by.
 
 ```python
 lst = [('candy','30','100'), ('apple','10','200'), ('baby','20','300')]
