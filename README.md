@@ -1,4 +1,4 @@
-﻿# Leetcode Practice
+# Leetcode Practice
 
 Jonathan's Wallbreaker solutions repo. Jonathan is part of the first cohort of the summer 2019.
 
@@ -16,11 +16,22 @@ Jonathan's Wallbreaker solutions repo. Jonathan is part of the first cohort of t
 
 ## Progress tracking:
 
-| Problem | Difficulty |Concept | Total Deep-focus Time (min) | Times Visited | Understood | Implemented Correctly|
-|---------|------------|---------|-----------------------|---------------|------------|------------|
+| Problem | Difficulty | Concept | Total Deep-focus Time (min) | Times Visited | Understood | Implemented Correctly |
+| ------- | ---------- | ------- | --------------------------- | ------------- | ---------- | --------------------- |
+|         |            |         |                             |               |            |                       |
+| --------- | ------------ | --------- | ----------------------- | --------------- | ------------ | ------------ |
+| --------- | ------------ | --------- | ----------------------- | --------------- | ------------ | ------------ |
+|           |              |           |                         |                 |              |              |
 |    56    |   Medium | Sorting    |   30          |        1       | Yes | Yes
-|72         |   Hard |DP + Recursion |  120 (slow)       |     2       | Yes | Not yet|
-|213    | Medium |DP + Greedy     | 40 (slow)      | 1           | Not yet| Not yet|
+
+| 72   | Hard | DP + Recursion | 120 (slow) | 2    | Yes  | Not yet |
+| ---- | ---- | -------------- | ---------- | ---- | ---- | ------- |
+|      |      |                |            |      |      |         |
+| 213  | Medium | DP + Greedy | 40 (slow) | 1    | Not yet | Not yet |
+| 22 | Medium | DP + Recursion | 60 (slow) | 1 | Yes | Yes |
+|      |        |             |           |      |         |         |
+
+
 
 
 ### References:
