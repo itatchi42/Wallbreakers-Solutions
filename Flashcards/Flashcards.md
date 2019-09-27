@@ -19,6 +19,13 @@ val = ord('a') # val = 97
 letter = chr(val) # letter = 'a'
 ```
 
+#### Convert String to List
+
+```python
+myStr = 'abcdef'
+myList = list(myStr) # ['a', 'b', 'c', 'd', 'e', 'f']
+```
+
 
 
 
@@ -47,8 +54,9 @@ Allows you to specify the key that you wish to sort by.
 
 ```python
 lst = [('candy','30','100'), ('apple','10','200'), ('baby','20','300')]
-lst.sort(key=lambda x : x[1])
+lst.sort(key=lambda x : x[1]) # In-place sort
 print(lst)
+# Note: `sorted` returns list
 ```
 
 #### Binary Search
@@ -72,7 +80,27 @@ bisect.bisect(a, 2) # returns 2
 
 ### Heaps:
 
+A heap has property that ALL nodes follow particular order. A *max heap* means that every parent is BIGGER than its children. A *min heap* means that every parent is SMALLER than its children. 
+
+Ex:
+
+*Valid* min heap
+
+![minheap_good](https://github.com/itatchi42/Wallbreakers-Solutions/blob/master/Flashcards/images/minheap_good.png)
+
+
+
+*Invalid* min heap
+
+![minheap_bad](https://github.com/itatchi42/Wallbreakers-Solutions/blob/master/Flashcards/images/minheap_bad.png)
+
 **O(1)** lookup find-max for max heaps, **O(logn)** deletion of max, and **O(logn)** node insertion. 
+
+
+
+
+
+### Priority Queues:
 
 
 
