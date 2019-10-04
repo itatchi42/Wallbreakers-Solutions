@@ -48,6 +48,16 @@ arr2D[0, 1] = 5
 
 ### Lists:
 
+#### pop() vs remove() vs del
+
+`arr.pop(4)` returns and removes the element stored at **index** 4.
+
+`arr.remove(4)` removes the FIRST element w/ **value** 4.
+
+`del arr[4]` removes the element stored at **index** 4. 
+
+
+
 #### Sort w/ Lambda
 
 Allows you to specify the key that you wish to sort by.
