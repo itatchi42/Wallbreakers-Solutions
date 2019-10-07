@@ -181,15 +181,21 @@ Set a pointer to the last ele of the array and call it `pivot`. Set another poin
 
 Recursivey halve the array and repeat quick sort on each half.
 
+[3 min. QuickSort demo](#https://www.youtube.com/watch?v=kUon6854joI)
+
 Ex:
 
-Here, 2 is the pivot. Since 8 > 2, we shift the pivot left and perform the swap.
+Here, 2 is the pivot. Since 8 > 2, we shift the pivot left and swap 8 & 10.
 
 ![quicksort1](https://github.com/itatchi42/Wallbreakers-Solutions/blob/master/Flashcards/images/quicksort1.png)
 
-Below, 2 is still the pivot. Since 10 > 2, we shift the pivot left and perform the swap again. After this step, the resultant array will look like `[0, 3, 1, 7, 2, 10, 8 ]`.
+Below, 2 is still the pivot. Since 10 > 2, we shift the pivot left and swap 10 & 0. After this step, the resultant array will look like `[0, 3, 1, 7, 2, 10, 8 ]`.
 
-![quicksort2](https://github.com/itatchi42/Wallbreakers-Solutions/blob/master/Flashcards/images/quicksort1.png)
+![quicksort2](https://github.com/itatchi42/Wallbreakers-Solutions/blob/master/Flashcards/images/quicksort2.png)
+
+Below, 2 is still the pivot. Since 0 < 2, we do NOT swap. Instead, we increment `i`, so it now points to the 3. Then restart the process all over again!
+
+![quicksort3](https://github.com/itatchi42/Wallbreakers-Solutions/blob/master/Flashcards/images/quicksort3.png)
 
 Complexity: **O(nlogn)**
 
