@@ -2,8 +2,8 @@
 
 ## Contents
 
-- [Primitive Types](#Primative Types)
-- [Data Structures](#Data Structures)
+- [Primitive Types](#Primative-Types)
+- [Data Structures](#Data-Structures)
 - [Sorting](#Sorting) 
 
 
