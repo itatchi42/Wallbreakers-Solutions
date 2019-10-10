@@ -51,6 +51,43 @@ class Solution:
         return True
 ```
 
+### Rotate NxN Matrix 90 Degrees (Medium)
+
+[Problem](https://www.interviewbit.com/problems/rotate-matrix/)
+
+You are given an n x n 2D matrix representing an image. Rotate the image by 90 degrees (clockwise). You need to do this in place.
+
+```python
+class Solution:
+    # @param A : list of list of integers
+    # @return the same list modified
+    def rotate(self, A):
+        lenA, r = len(A)-1, 0
+        # Perform once if size <= 2x2 matrix
+        if lenA == 1: return self.helper(A, lenA, r, 0, lenA)
+            
+        start, end = 0, lenA
+        while end - start >= 1:
+            A = self.helper(A, lenA, r, start, end)
+            start, end, r = start+1, end-1, r+1 # Adjust bounds
+        return A
+    
+    def helper(self, A, lenA, r, start, end):
+        for c in range(start, end):
+            # Rotate top-> right
+            temp1 = A[c][lenA-r]
+            A[c][lenA-r] = A[r][c]
+            # Rotate right-> bott
+            temp2 = A[lenA-r][lenA-c] 
+            A[lenA-r][lenA-c] = temp1
+            # Rotate bott-> left
+            temp3 = A[lenA-c][r]
+            A[lenA-c][r] = temp2
+            # Rotate left-> top
+            A[r][c] = temp3
+        return A
+```
+
 
 
 

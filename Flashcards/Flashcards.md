@@ -2,9 +2,35 @@
 
 ## Contents
 
+- [Operators](#Operators)
 - [Primitive Types](#Primative-Types)
 - [Data Structures](#Data-Structures)
 - [Sorting](#Sorting) 
+
+
+
+## Operators
+
+### Tilde (~):
+
+#### Regular use
+
+Tilde just is the twos-complement (reverse all bits) of an integer. ~x is defined as -(x + 1). Ex:
+
+```python
+a = ~0 # = -1
+a = ~7 # = -8
+a = ~-9 # -(-9+1) = 8
+```
+
+#### Swapping List Indices
+
+Can also be used to swap indices of a list around, perhaps even to rotate a matrix around. Ex:
+
+```python
+a = ([1, 2])
+a[0], a[~0] = [~0], a[0] # Yields a = [2, 1]
+```
 
 
 
