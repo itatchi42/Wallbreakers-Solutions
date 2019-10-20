@@ -90,6 +90,37 @@ class Solution:
 
 
 
+## Backtracking
+
+### String Permutation (Medium)
+
+*Note:* Code **NOT** yet working on input strings of length 4+!!
+
+```python 
+def permute(A): # A = 'boat'
+	if not A: return None
+	lenA, ans = len(A), []
+	words, intermed = [], {A[0] : 1}
+
+	def helper(curr, remain, x):
+		if len(remain) == 1: 
+			words.append(curr + remain) # words = ['boat', 'bota']
+			return
+		j = 0
+		for i in range(x+1, lenA): #[3,4)
+			if curr + A[i] not in intermed: intermed[curr + A[i]] = 1 # intermed['bat'] = 1
+			helper(curr + remain[j], remain[:j] + remain[j+1:], i) # helper('ba', 'ot', 2)
+			j += 1
+		return words
+
+	for x in range(len(A)):
+		if x > 0:
+			A = A[x] + A[1:x] + A[0] + A[x+1:] # Swap idx 0 and x
+		helper(A[0], A[1:], 0) # helper('b', 'oat', 0)
+
+	return words
+```
+
 
 
 
